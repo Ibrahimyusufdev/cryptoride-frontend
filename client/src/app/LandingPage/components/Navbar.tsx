@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { Menu, X, Car, ChevronDown, Wallet } from "lucide-react";
+import { Menu, X, Car, Wallet } from "lucide-react";
 import Link from "next/link";
 
 export const NavBar = () => {
@@ -38,7 +38,7 @@ export const NavBar = () => {
         </ul>
 
         {/* button */}
-        <button className="cursor bg-white text-black hover:text-white flex hidden items-center gap-1 rounded-[624.9375rem] px-3 py-2.5 text-center text-base font-semibold hover:bg-purpleLight lg:flex">
+        <button className="cursor bg-white text-black hover:text-white hidden items-center gap-1 rounded-[624.9375rem] px-3 py-2.5 text-center text-base font-semibold hover:bg-purpleLight lg:flex">
           <Wallet />
           <span>Connect Wallet</span>
         </button>
