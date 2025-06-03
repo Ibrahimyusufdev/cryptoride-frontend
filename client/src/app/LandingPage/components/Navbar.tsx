@@ -38,7 +38,7 @@ export const NavBar = () => {
         </ul>
 
         {/* button */}
-        <button className="cursor bg-white text-black hover:text-white hidden items-center gap-1 rounded-[624.9375rem] px-3 py-2.5 text-center text-base font-semibold hover:bg-purpleLight lg:flex">
+        <button className="cursor bg-slate-50 text-black hover:text-white hidden items-center gap-1 rounded-[624.9375rem] px-3 py-2.5 text-center text-base font-semibold hover:bg-purpleLight lg:flex">
           <Wallet />
           <span>Connect Wallet</span>
         </button>
