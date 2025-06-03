@@ -1,8 +1,17 @@
 "use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const steps = {
+// Define types
+type TabKey = 'passenger' | 'driver';
+
+interface Step {
+  title: string;
+  desc: string;
+}
+
+const steps: Record<TabKey, Step[]> = {
   passenger: [
     {
       title: "Connect Your Wallet",
@@ -42,7 +51,7 @@ const steps = {
 };
 
 export const HowItWorks = () => {
-  const [activeTab, setActiveTab] = useState("passenger");
+  const [activeTab, setActiveTab] = useState<TabKey>('passenger');
 
   return (
     <section className="w-full bg-white px-4 py-20 font-manrope" id="how-it-works">
@@ -86,7 +95,7 @@ export const HowItWorks = () => {
               transition={{ duration: 0.4 }}
               className="space-y-6"
             >
-              {steps[activeTab].map((step, index) => (
+              {steps[activeTab].map((step: Step, index: number) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#22C55E] text-sm font-bold text-white">
                     {index + 1}
